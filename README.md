@@ -35,7 +35,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone [https://github.com](https://github.com)
+   git clone [https://github.com/Analia2283/spa-centro-estetica.git](https://github.com/Analia2283/spa-centro-estetica.git)
 
 ### Instalación
 2. Versiones d software.
@@ -55,7 +55,7 @@ npm run dev
 ```
 ## Deploy
 
-- [Link]()
+- [Link](https://spa-centro-estetica.vercel.app/)
 
 ## Autor
 Analia Isla - Desarrollo Integral - (https://github.com/Analia2283)
