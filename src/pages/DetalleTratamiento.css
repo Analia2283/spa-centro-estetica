@@ -1,0 +1,149 @@
+.detalle-container {
+  padding: 120px 10% 80px; /* Espacio para el Navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detalle-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.detalle-header h1 {
+  font-size: 2.1rem;
+  color: #d4a373;
+  text-transform: capitalize;
+}
+
+.linea-decorativa {
+  width: 100px;
+  height: 3px;
+  background-color: #d4a373;
+  margin: 15px auto;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.detalle-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.detalle-info h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.detalle-info p {
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.detalle-stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  color: #d4a373;
+  font-weight: bold;
+}
+
+.detalle-precio-box {
+  background-color: #fdf6f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.precio-valor {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-reserva {
+  width: 100%;
+  background-color: #d4a373;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-reserva:hover {
+  background-color: #bc8a5f;
+}
+
+.btn-volver {
+  background: transparent;
+  border: none;
+  color: #d4a373;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s;
+  padding: 0;
+}
+
+.btn-volver:hover {
+  transform: translateX(-5px);
+  color: #bc8a5f;
+}
+
+/* El botón de WhatsApp ahora es un <a> con estilo de botón */
+.btn-reserva-link {
+  display: block;
+  width: 100%;
+  background-color: #d4a373;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-reserva-link:hover {
+  background-color: #bc8a5f;
+}
+
+.stat-item span {
+  display: block;
+}
+
+/* Efecto de carga */
+.loading {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-principal);
+  color: #d4a373;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+}

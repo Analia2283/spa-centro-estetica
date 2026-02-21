@@ -1,0 +1,163 @@
+/* Sedes.css */
+
+.sedes-container {
+  padding: 80px 5%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Título Principal - Configurado en Sans Serif */
+.sedes-title {
+  font-family: var(--font-principal); /* Montserrat / Sans Serif */
+  color: var(--color-dorado);
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sedes-subtitle {
+  font-family: var(--font-principal);
+  color: #777;
+  margin-bottom: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Grilla de Sedes */
+.sedes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de Sede */
+.sede-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+/* Imagen con efecto Zoom */
+.sede-imagen {
+  height: 220px;
+  overflow: hidden;
+}
+
+.sede-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sede-card:hover .sede-imagen img {
+  transform: scale(1.1);
+}
+
+/* Cuerpo de la Tarjeta */
+.sede-info {
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Esto permite que el botón se alinee al fondo */
+}
+
+/* Subtítulos de la Sede - Configurado en Sans Serif */
+.sede-nombre {
+  font-family: var(--font-principal); /* Montserrat / Sans Serif */
+  color: var(--color-oscuro);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sede-detalles p {
+  font-family: var(--font-principal);
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 1.1rem;
+}
+
+/* Botón con Alineación y Pulso */
+.btn-mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto; /* Empuja el botón al final de la tarjeta */
+  
+  background-color: var(--color-dorado);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-principal);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  
+  /* Animación de Pulso */
+  box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.7);
+  animation: pulse-dorado 2s infinite;
+}
+
+.btn-mapa:hover {
+  background-color: #bc8a5f;
+  transform: translateY(-3px);
+  animation: none; /* Detiene el pulso al interactuar */
+  box-shadow: 0 10px 20px rgba(212, 163, 115, 0.3);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Keyframes para el Efecto de Pulso */
+@keyframes pulse-dorado {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(212, 163, 115, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 163, 115, 0);
+  }
+}
+
+/* Ajustes para Dispositivos Móviles */
+@media (max-width: 768px) {
+  .sedes-title {
+    font-size: 2rem;
+  }
+  
+  .sedes-container {
+    padding: 50px 5%;
+  }
+
+  .sedes-grid {
+    gap: 25px;
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}

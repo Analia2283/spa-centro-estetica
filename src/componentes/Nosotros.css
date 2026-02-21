@@ -1,0 +1,158 @@
+.nosotros-container {
+  padding: 120px 10%;
+  background-color: #fdfbf9;
+  overflow: visible;
+  position: relative;
+}
+
+.nosotros-container::before {
+  content: "ESTÉTICA";
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(212, 163, 115, 0.03); /* El dorado casi invisible */
+  letter-spacing: 20px;
+  pointer-events: none;
+}
+
+.nosotros-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  /* Aseguramos que el contenedor flex tenga una altura mínima calculable */
+  min-height: 500px; 
+}
+
+.scroll-animate-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Contenedor de Imágenes al 50% */
+.nosotros-imagenes {
+  flex: 1;
+  position: relative;
+  height: 450px; /* Altura para contener las imágenes superpuestas */
+}
+
+.imagen-principal {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.imagen-superpuesta {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 50%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 7px solid #fdfbf9; /* Crea el efecto de separación */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Contenedor de Texto al 50% */
+.nosotros-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.nosotros-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #333;
+  position: relative;
+}
+
+/* Una pequeña línea decorativa bajo el título */
+.nosotros-texto h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #d4a373; 
+}
+
+.nosotros-texto p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE: Tablets y Móviles */
+@media (max-width: 992px) {
+  .nosotros-container {
+    padding: 80px 5%; /* Menos padding lateral en móviles */
+  }
+
+  .nosotros-content {
+    flex-direction: column; /* Apila imagen arriba y texto abajo */
+    gap: 60px; /* Espacio entre los bloques apilados */
+    text-align: center;
+  }
+
+  .nosotros-imagenes {
+    width: 100%;
+    height: 380px; /* Un poco más bajo para que no ocupe toda la pantalla */
+    margin-bottom: 20px;
+  }
+
+  .imagen-principal {
+    width: 85%; /* Un poco más ancha en móvil */
+    height: 100%;
+  }
+
+  .imagen-superpuesta {
+    width: 55%;
+    height: 55%;
+    bottom: -20px;
+    right: 5%; /* La centramos un poco más hacia el borde */
+    border-width: 5px; /* Borde más fino para pantallas pequeñas */
+  }
+
+  .nosotros-texto {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .nosotros-texto h2 {
+    font-size: 2rem;
+  }
+
+  .nosotros-texto h2::after {
+    left: 50%; /* Centra la línea decorativa */
+    transform: translateX(-50%);
+  }
+
+  .nosotros-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Ajuste para móviles muy pequeños (iPhone SE, etc) */
+@media (max-width: 480px) {
+  .nosotros-imagenes {
+    height: 300px;
+  }
+  
+  .nosotros-container::before {
+    font-size: 5rem; /* El texto de fondo más pequeño para que no estorbe */
+    top: 20px;
+  }
+}

@@ -1,0 +1,169 @@
+.contacto-container {
+  padding: 100px 5% 80px;
+  background-color: #fdf6f0;
+}
+
+.contacto-content h2 {
+  text-align: center;
+  color: #d4a373;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Reutilizando tu línea decorativa */
+.linea-decorativa {
+  width: 80px;
+  height: 3px;
+  background-color: #d4a373;
+  margin: 0 auto 20px;
+}
+
+.contacto-content p {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contacto-form input, .contacto-form textarea {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contacto-form input:focus, .contacto-form textarea:focus {
+  border-color: #d4a373;
+}
+
+.btn-enviar {
+  background-color: #d4a373;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #bc8a5f;
+  transform: translateY(-2px);
+}
+
+/* Estilos de Info e Iconos */
+.contacto-info h3 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.icon-gold {
+  color: #d4a373;
+  flex-shrink: 0;
+}
+
+.info-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item strong {
+  color: #d4a373;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-item a, .info-item span {
+  color: #444;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.info-item a:hover {
+  color: #d4a373;
+}
+
+/* Redes Sociales */
+.social-links-wrapper {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0d5cb;
+}
+
+.social-links-wrapper h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #d4a373;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.social-icon-btn:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contacto-form {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,102 @@
+.precios-page {
+  padding: 120px 10% 80px;
+  background-color: #fffaf5;
+  min-height: 100vh;
+}
+
+.precios-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.precios-header h1 {
+  font-size: 3rem;
+  color: #d4a373;
+  margin-bottom: 10px;
+}
+
+.precios-header p {
+  color: #888;
+  font-style: italic;
+}
+
+.precios-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.precios-categoria {
+  margin-bottom: 50px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.precios-categoria h2 {
+  color: #333;
+  border-bottom: 2px solid #fdf6f0;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.precio-row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.servicio-nombre {
+  font-weight: 500;
+  color: #444;
+  white-space: nowrap;
+}
+
+.puntos-guia {
+  flex-grow: 1;
+  border-bottom: 1px dotted #ccc;
+  margin: 0 10px;
+}
+
+.servicio-precio {
+  font-weight: bold;
+  color: #d4a373;
+  font-size: 1.1rem;
+}
+
+.precios-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-descargar {
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #d4a373;
+  color: #d4a373;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-descargar:hover {
+  background: #d4a373;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .precios-page {
+    padding: 100px 5% 50px;
+  }
+  .precios-header h1 {
+    font-size: 2.2rem;
+  }
+  .servicio-nombre {
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+}

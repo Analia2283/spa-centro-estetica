@@ -1,0 +1,77 @@
+.mosaico-section {
+  padding: 60px 5%;
+  background-color: #fffaf5; /* Un tono crema suave */
+  text-align: center;
+}
+
+.mosaico-section h2 {
+  margin-bottom: 40px;
+  color: #d4a373;
+  font-size: 2.5rem;
+}
+
+.mosaico-container {
+  display: grid;
+  /* Crea columnas automáticas de mínimo 250px */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+.mosaico-item {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mosaico-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+}
+
+/* Efecto Hover: La imagen se agranda un poco */
+.mosaico-item:hover img {
+  transform: scale(1.1);
+}
+
+
+.mosaico-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(212, 163, 115, 0.7); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.mosaico-item:hover .mosaico-overlay {
+  opacity: 1;
+}
+
+.mosaico-overlay span {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+  .mosaico-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+    gap: 10px;
+  }
+  .mosaico-item {
+    height: 200px;
+  }
+}
